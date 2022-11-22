@@ -1,0 +1,47 @@
+<div class="notebook">
+
+<div class="nb-cell markdown" name="md1">
+### The SWISH hangout room
+
+You can add messages to this room from here or using the __Broadcast to hangout__ option from the __Send__ button on any other file.  In the latter case the message is added to this room with a link to the files.
+</div>
+
+<div class="nb-cell program" name="p1">
+% Hecho
+perro(fido).
+perro(firulais).
+perro(bob).
+
+gato(felix).
+
+padre(fido, firulais).
+padre(fido, bob).
+
+% Reglas
+%animal(_).  %∀x animal(x) % no es correcto, todo es un animal 
+
+animal(X):- perro(X) ; gato(X).  %∀x perro(x) =&gt; animal(x)
+%animal(X):- gato(X).  %∀x perro(x) =&gt; animal(x)
+</div>
+
+<div class="nb-cell query" name="q1">
+perro(fido)
+</div>
+
+<div class="nb-cell query" name="q2">
+padre(fido,X)
+</div>
+
+<div class="nb-cell query" name="q3">
+animal(felix)
+</div>
+
+<div class="nb-cell markdown" name="md2">
+# La ejecucicón de una consulta es la unificación sucesiva de la expresion de la consulta con cada linea del programa
+</div>
+
+<div class="nb-cell program" name="p2">
+[A,B,C,D] = [1,2,3,4].
+</div>
+
+</div>

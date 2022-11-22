@@ -1,0 +1,35 @@
+<div class="notebook">
+
+<div class="nb-cell program" name="p1">
+:- dynamic numero/2.
+numero(1, "uno").
+numero(2, "dos").
+numero(3, "tres").
+
+n(par) :- numero(2,_); numero(4,_).
+n(impar) :- numero(1,_);numero(3,_).
+
+preguntar_numeros :-
+    write("Ingrese un numero"),nl,
+    read(N),
+    write("El numero ingresado es"),write(N),
+    write("Ingrese el numero en palabras"),
+    read(N2),
+    write("En palabras es"), write(N2),
+    retractall(numero(_,_)),
+    asserta(numero(N, N2)),
+    numero(5,P),
+    write("Ingresado es: "),write(P),
+    funcion2,
+    n(PPP),
+    write(PPP).
+
+funcion2 :- 
+    write("Es una nueva funcion"),nl,nl.
+</div>
+
+<div class="nb-cell query" name="q1">
+preguntar_numeros.
+</div>
+
+</div>

@@ -1,0 +1,60 @@
+<div class="notebook">
+
+<div class="nb-cell program" name="p3">
+:- dynamic numero/2.
+numero(1, uno).
+numero(2, dos).
+numero(3, tres).
+
+traductor:-
+    write("ingrese un numero 1 2 o 3"), nl,
+    read(Numero),
+    numero(Numero,F),
+    asserta(numero(10,"soy el 10")),
+    numero(2,HH),
+    nl,nl,write(HH),nl,nl,
+    write(Numero),write(F),
+    write("El numero traducido es"),nl,
+    n(P),
+    write(P).
+	
+
+n(one) :- numero(1,_).
+n(two) :- numero(2,_).
+n(three):- numero(3,_).
+</div>
+
+<div class="nb-cell query" name="q3">
+traductor.
+</div>
+
+<div class="nb-cell program" name="p4">
+%:- dynamic numero/2.
+numero(1, uno).
+numero(2, dos).
+numero(3, tres).
+
+
+
+traductor2:-
+    write("ingrese un numero 1 2 o 3"), nl,
+    
+    %numero(Numero,F),
+    %retractall(numero(_,_)),
+    read(Numero),
+    numero(Numero,_),
+    asserta(numero(Numero,_)),
+    write("El numero traducido es"),nl,
+    n(P),
+    write(P).
+	
+n(one) :- numero(1,_).
+n(two) :- numero(2,_).
+n(three):- numero(3,_).
+</div>
+
+<div class="nb-cell query" name="q4">
+traductor2
+</div>
+
+</div>
